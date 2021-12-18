@@ -13,11 +13,12 @@ v.qq.com##.mod_vip_popup
 v.qq.com##.tvip_layer
 v.qq.com###mask_layer
 ! 爱奇艺
+||stc.iqiyipic.com/js/sdkpack/vippay.js
 www.iqiyi.com###nav_appDown
 www.iqiyi.com##.qy-player-pca,.func-download.func-item,.header-download.header-sideItem,.qy-header__game,.header-vip,.qy-player-side-op,.header-userSmall,.qy-anchor-hongbao-box,.scroll-anchor,.vip-btn,.pl__1
 ! 优酷
 youku.com##.dropdown_3IYGs,.u-app_Ubbmj,.u-app,.u-vip_3-BwE,.qr-wrap,.handle_1yu0I,.show_C8p0e.info-bottom_3C0mQ
-v.youku.com##.u-login_PEt-Q,.animate-in.information-tips-box,#bpmodule-playpage-fee
+v.youku.com##.u-login_PEt-Q,.animate-in.information-tips-box,#bpmodule-playpage-fee,.bg-mark-square-golden.bg-mark-square
 ! 芒果
 www.mgtv.com##.m-agreement,.user,.pclient,.openvip,.active.sidebar-download_item,.open-vip-dialog.vip-btn.btn,.app-float-down
 ! 乐视
@@ -34,7 +35,7 @@ thepiratebay.org##.ad120.col-right,.ad120.col-left,.ad468.col-right,.align-cente
 bilibili.com###reportFirst2,.eva-extension-area,.login-tip, .unlogin-popover
 ! 直播
 live.bilibili.com##.gift-list.gift-section
-www.douyu.com##.ToolbarActivityArea,.ToolbarGiftArea,.PlayerToolbar-Wealth,.Download,.BarrageFilter-fkbutton,.multiBitRate-da4b60,.EmotionSwitcher,.ChatLetter-BtnHolder,.Horn4Category-btn--popTrigger.Horn4Category-btn,.NobleBarrageSwitcher,.is-color00.FansBarrageSwitcher,.PopularBarrageBtn
+www.douyu.com##.ToolbarActivityArea,.ToolbarGiftArea,.PlayerToolbar-Wealth,.Download,.BarrageFilter-fkbutton,.multiBitRate-da4b60,.EmotionSwitcher,.ChatLetter-BtnHolder,.Horn4Category-btn--popTrigger.Horn4Category-btn,.NobleBarrageSwitcher,.is-color00.FansBarrageSwitcher,.PopularBarrageBtn,.MatchSystemChatFansBarrage,.MatchSystemChatSuperBarrage
 www.huya.com###UDBSdkLgn,.player-gift-wrap,.room-chat-tool-smile.room-chat-tool,.room-chat-tool-color.room-chat-tool,.room-chat-tool-blockWords.room-chat-tool,.entry--k4pVN0eWZG2KcjYy1__ug,.icon--bUcq58akwxSlnBrBWHIrf,.player-app-qrcode
 ! 视频水印
 ixigua.com##.common-xgplayer__Logo
@@ -44,11 +45,15 @@ v.qq.com##.txp_waterMark_pic
 live.bilibili.com##.web-player-icon-roomStatus
 pptv.com###p-mark
 ! 规则
+ku137.net##.m_adv
+www.solidot.org###ads
+www.sogou.com###QRcode-footer
+www.265.com##.b-Cb-Db-f.b-f
 pc.qq.com##.J_qq_download.btn01
 baoku.360.cn##th:nth-of-type(3)
 ||google.*/images/cleardot.gif
 baike.baidu.com##.before-content
-gushiwen.cn###formbody2,#formhead2
+gushiwen.cn###threeWeixin2
 www.yatu.tv###daohang
 dy2018.com,dytt89.com##.noticeFixedBox
 ||jx.4kdv.com/logo.png

@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-01-01
+! Last modified: 2022-01-06
 ! Expires: 30 days (update frequency)
 ! Homepage: https://cdn.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
@@ -42,6 +42,7 @@ www.huya.com###UDBSdkLgn,.player-gift-wrap,.room-chat-tool-smile.room-chat-tool,
 ixigua.com##.common-xgplayer__Logo
 iqiyi.com##.iqp-logo-box
 v.youku.com##.logo-new
+v.youku.com##.kui-watermark-logo-layer
 v.qq.com##.txp_waterMark_pic
 live.bilibili.com##.web-player-icon-roomStatus
 pptv.com###p-mark
@@ -81,12 +82,3 @@ www.yatu.tv###daohang
 dy2018.com,dytt89.com##.noticeFixedBox
 ||jx.4kdv.com/logo.png
 ||govchengdu.cn^
-@@trace.qq.com^
-@@beacon.qq.com^
-@@qq.com/kvcollect?
-@@qq.com/collect?
-@@qq.com/speed
-@@qq.com/stdlog
-@@msg.qy.net^
-@@gm.mmstat.com^
-@@yt1.mmstat.com^

@@ -1,12 +1,11 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-01-06
+! Last modified: 2022-01-08
 ! Expires: 30 days (update frequency)
 ! Homepage: https://cdn.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
 ! 腾讯视频
-qq.com##+js(json-prune, ad)
 v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_collect,.__lite_hide__.ft_cell_vcoin.ft_cell,.ft_cell_feedback.ft_cell
 ! ##开通ViP会员
 v.qq.com##.mod_vip_popup
@@ -31,7 +30,7 @@ v.pptv.com##.operate-space,.aside-detail-pay,div.advView-two
 ! YouTube
 youtube.com##.ytp-ce-element-show
 ! 海盗湾
-thepiratebay.org##.ad120.col-right,.ad120.col-left,.ad468.col-right,.align-center.ad728,#ad-bottom,#d > .hyper-link,#d2 > .hyper-link,#d > [href^="http://horiticaldist.fun/redirect"],#d2 > [href^="http://horiticaldist.fun/redirect"]
+thepiratebay.org##.ad120.col-right,.ad120.col-left,.ad468.col-right,.align-center.ad728,#ad-bottom,#d > .hyper-link,#d2 > .hyper-link
 ! B站
 bilibili.com###reportFirst2,.eva-extension-area,.login-tip, .unlogin-popover
 ! 直播
@@ -39,15 +38,31 @@ live.bilibili.com##.gift-list.gift-section
 www.douyu.com##.ToolbarActivityArea,.ToolbarGiftArea,.PlayerToolbar-Wealth,.Download,.BarrageFilter-fkbutton,.multiBitRate-da4b60,.EmotionSwitcher,.ChatLetter-BtnHolder,.Horn4Category-btn--popTrigger.Horn4Category-btn,.NobleBarrageSwitcher,.is-color00.FansBarrageSwitcher,.PopularBarrageBtn,.MatchSystemChatFansBarrage,.MatchSystemChatSuperBarrage
 www.huya.com###UDBSdkLgn,.player-gift-wrap,.room-chat-tool-smile.room-chat-tool,.room-chat-tool-color.room-chat-tool,.room-chat-tool-blockWords.room-chat-tool,.entry--k4pVN0eWZG2KcjYy1__ug,.icon--bUcq58akwxSlnBrBWHIrf,.player-app-qrcode
 ! 视频水印
-ixigua.com##.common-xgplayer__Logo
+v.qq.com##.txp_waterMark_pic
 iqiyi.com##.iqp-logo-box
 v.youku.com##.logo-new
 v.youku.com##.kui-watermark-logo-layer
-v.qq.com##.txp_waterMark_pic
-live.bilibili.com##.web-player-icon-roomStatus
+ixigua.com##.common-xgplayer__Logo
 pptv.com###p-mark
+live.bilibili.com##.web-player-icon-roomStatus
+! ↓ uBlock filters ↓
+qq.com##+js(json-prune, ad)
+*level=$media,domain=v.qq.com,redirect=noopmp3-0.1s
+iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)
+iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
+iqiyi.com##.black-screen[data-cupid="adblock-blackscreen"]
+m.iqiyi.com##+js(set, Object.prototype.adPlayerId, '')
+iqiyi.com##.iqp-player > iqpdiv[data-cupid="container"] > div[data-adzone][templatetype="common_pause"]
+||cibntv.net/youku/*$media,redirect=noopmp3-0.1s,domain=youku.com
+||valipl.cp31.ott.cibntv.net^$media,redirect=noopmp3-0.1s,domain=youku.com
+youku.com##+js(nano-stb, , ,0)
+@@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
+*$image,redirect-rule=1x1.gif,domain=youku.com
+youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements, undefined)
+! ↑ uBlock filters ↑
 ! 规则
-##.m_adv
 ||qzs.qq.com/qzone/biz/res/i.js
 ||sinaimg.cn/wap/custom_html/
 ||sina.cn/wap/custom_html/
@@ -70,7 +85,7 @@ pptv.com###p-mark
 ||*/index/q.php?cid=
 ||*/baidu_tongji.js
 www.solidot.org###ads
-cn.bing.com##.tray,.card_body
+bing.com##.tray,.card_body
 www.sogou.com###QRcode-footer
 www.265.com##.b-Cb-Db-f.b-f
 pc.qq.com##.J_qq_download.btn01

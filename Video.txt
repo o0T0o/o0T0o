@@ -1,8 +1,8 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-01-08
-! Expires: 30 days (update frequency)
+! Last modified: 2022-01-21
+! Expires: 7 days (update frequency)
 ! Homepage: https://cdn.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
 ! 腾讯视频
@@ -11,6 +11,13 @@ v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_col
 v.qq.com##.mod_vip_popup
 v.qq.com##.tvip_layer
 v.qq.com###mask_layer
+
+||l.qq.com/lview?
+||l.qq.com/livemsg?
+||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
+||gtimg.com/qqlive/
+||qzonestyle.gtimg.cn/qzone/biz/ac/comm/$script
+||imgcache.qq.com/qzone/biz/comm/js/qbs.js
 ! 爱奇艺
 ||stc.iqiyipic.com/js/sdkpack/vippay.js
 www.iqiyi.com###nav_appDown
@@ -63,6 +70,7 @@ youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements,
 youtube.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements, undefined)
 ! ↑ uBlock filters ↑
 ! 规则
+ysepan.com###ck_glts_html
 ||qzs.qq.com/qzone/biz/res/i.js
 ||sinaimg.cn/wap/custom_html/
 ||sina.cn/wap/custom_html/

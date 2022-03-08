@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-01-21
+! Last modified: 2022-03-08
 ! Expires: 7 days (update frequency)
 ! Homepage: https://cdn.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
@@ -93,7 +93,7 @@ ysepan.com###ck_glts_html
 ||*/index/q.php?cid=
 ||*/baidu_tongji.js
 www.solidot.org###ads
-bing.com##.tray,.card_body
+bing.com##.iconAndButton.bnp_fly_hp.bnp_fly_sp,.card_body
 www.sogou.com###QRcode-footer
 www.265.com##.b-Cb-Db-f.b-f
 pc.qq.com##.J_qq_download.btn01

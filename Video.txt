@@ -1,9 +1,9 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-07-01
+! Last modified: 2022-08-09
 ! Expires: 7 days (update frequency)
-! Homepage: https://cdn.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
+! Homepage: https://fastly.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
 ! 腾讯视频
 v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_collect,.__lite_hide__.ft_cell_vcoin.ft_cell,.ft_cell_feedback.ft_cell
@@ -11,9 +11,6 @@ v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_col
 v.qq.com##.mod_vip_popup
 v.qq.com##.tvip_layer
 v.qq.com###mask_layer
-v.qq.com##.panel-overlay
-v.qq.com##.panel-overlay__container
-v.qq.com##.panel-overlay__mask
 
 ||l.qq.com/livemsg?
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
@@ -36,7 +33,7 @@ tv.sohu.com##.hd-fBox-vip,.hd-fBox-ifox,.hd-fBox-app,.vBox-xiaPhone,.hd-fBox-use
 ! PPTV
 v.pptv.com##.operate-space,.aside-detail-pay,div.advView-two
 ! YouTube
-youtube.com##.ytp-ce-element-show
+youtube.com##.ytp-ce-element-show,.iv-click-target.branding-img
 ! 海盗湾
 thepiratebay.org##.ad120.col-right,.ad120.col-left,.ad468.col-right,.align-center.ad728,#ad-bottom,#d > .hyper-link,#d2 > .hyper-link
 ! B站

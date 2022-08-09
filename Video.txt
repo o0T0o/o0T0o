@@ -8,9 +8,9 @@
 ! 腾讯视频
 v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_collect,.__lite_hide__.ft_cell_vcoin.ft_cell,.ft_cell_feedback.ft_cell
 ! ##开通ViP会员
-v.qq.com##.mod_vip_popup
-v.qq.com##.tvip_layer
-v.qq.com###mask_layer
+v.qq.com##.panel-overlay
+v.qq.com##.panel-overlay__container
+v.qq.com##.panel-overlay__mask
 
 ||l.qq.com/livemsg?
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=

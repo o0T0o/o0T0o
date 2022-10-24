@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-08-09
+! Last modified: 2022-10-24
 ! Expires: 7 days (update frequency)
 ! Homepage: https://fastly.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
@@ -43,7 +43,7 @@ live.bilibili.com##.gift-list.gift-section
 www.douyu.com##.ToolbarActivityArea,.ToolbarGiftArea,.PlayerToolbar-Wealth,.Download,.BarrageFilter-fkbutton,.multiBitRate-da4b60,.EmotionSwitcher,.ChatLetter-BtnHolder,.Horn4Category-btn--popTrigger.Horn4Category-btn,.NobleBarrageSwitcher,.is-color00.FansBarrageSwitcher,.PopularBarrageBtn,.MatchSystemChatFansBarrage,.MatchSystemChatSuperBarrage
 www.huya.com###UDBSdkLgn,.player-gift-wrap,.room-chat-tool-smile.room-chat-tool,.room-chat-tool-color.room-chat-tool,.room-chat-tool-blockWords.room-chat-tool,.entry--k4pVN0eWZG2KcjYy1__ug,.icon--bUcq58akwxSlnBrBWHIrf,.player-app-qrcode
 ! 视频水印
-v.qq.com##.txp_waterMark_pic
+v.qq.com##.txp-watermark
 iqiyi.com##.iqp-logo-box
 v.youku.com##.logo-new
 v.youku.com##.kui-watermark-logo-layer

@@ -19,7 +19,7 @@ v.qq.com##.panel-overlay__mask
 ! 爱奇艺
 ||stc.iqiyipic.com/js/sdkpack/vippay.js
 www.iqiyi.com###nav_appDown
-www.iqiyi.com##.qy-player-pca,.func-download.func-item,.header-download.header-sideItem,.qy-header__game,.header-vip,.qy-player-side-op,.header-userSmall,.qy-anchor-hongbao-box,.scroll-anchor,.vip-btn,.pl__1
+www.iqiyi.com##.disable.item,.qy-player-pca,.func-download.func-item,.header-download.header-sideItem,.qy-header__game,.header-vip,.qy-player-side-op,.header-userSmall,.qy-anchor-hongbao-box,.scroll-anchor,.vip-btn,.pl__1
 ! 优酷
 youku.com##.dropdown_3IYGs,.u-app_Ubbmj,.u-app,.u-vip_3-BwE,.qr-wrap,.handle_1yu0I,.show_C8p0e.info-bottom_3C0mQ
 v.youku.com##.u-login_PEt-Q,.animate-in.information-tips-box,#bpmodule-playpage-fee,.bg-mark-square-golden.bg-mark-square

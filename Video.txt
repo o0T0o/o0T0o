@@ -1,26 +1,23 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2022-10-24
+! Last modified: 2023-12-11
 ! Expires: 7 days (update frequency)
 ! Homepage: https://fastly.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
 ! 腾讯视频
-v.qq.com###pc_client,.quick_vip.quick_item,.quick_user,.mod_vip_sidebar,.btn_collect,.__lite_hide__.ft_cell_vcoin.ft_cell,.ft_cell_feedback.ft_cell
 ! ##开通ViP会员
 v.qq.com##.panel-overlay
 v.qq.com##.panel-overlay__container
 v.qq.com##.panel-overlay__mask
 
-||l.qq.com/livemsg?
-||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
-||qzonestyle.gtimg.cn/qzone/biz/ac/comm/$script
-||imgcache.qq.com/qzone/biz/comm/js/qbs.js
 ! 爱奇艺
 ||stc.iqiyipic.com/js/sdkpack/vippay.js
 www.iqiyi.com###nav_appDown
 www.iqiyi.com##.disable.item,.qy-player-pca,.func-download.func-item,.header-download.header-sideItem,.qy-header__game,.header-vip,.qy-player-side-op,.header-userSmall,.qy-anchor-hongbao-box,.scroll-anchor,.vip-btn,.pl__1
 ! 优酷
+v.youku.com###checkout_counter_popup
+v.youku.com###checkout_counter_mask
 youku.com##.dropdown_3IYGs,.u-app_Ubbmj,.u-app,.u-vip_3-BwE,.qr-wrap,.handle_1yu0I,.show_C8p0e.info-bottom_3C0mQ
 v.youku.com##.u-login_PEt-Q,.animate-in.information-tips-box,#bpmodule-playpage-fee,.bg-mark-square-golden.bg-mark-square
 v.youku.com##.dropdown_15Trk
@@ -43,54 +40,43 @@ live.bilibili.com##.gift-list.gift-section
 www.douyu.com##.ToolbarActivityArea,.ToolbarGiftArea,.PlayerToolbar-Wealth,.Download,.BarrageFilter-fkbutton,.multiBitRate-da4b60,.EmotionSwitcher,.ChatLetter-BtnHolder,.Horn4Category-btn--popTrigger.Horn4Category-btn,.NobleBarrageSwitcher,.is-color00.FansBarrageSwitcher,.PopularBarrageBtn,.MatchSystemChatFansBarrage,.MatchSystemChatSuperBarrage
 www.huya.com###UDBSdkLgn,.player-gift-wrap,.room-chat-tool-smile.room-chat-tool,.room-chat-tool-color.room-chat-tool,.room-chat-tool-blockWords.room-chat-tool,.entry--k4pVN0eWZG2KcjYy1__ug,.icon--bUcq58akwxSlnBrBWHIrf,.player-app-qrcode
 ! 视频水印
-v.qq.com##.txp-watermark
+v.qq.com#$?#.txp-watermark{ remove: true; }
+! v.qq.com##.txp-watermark
 iqiyi.com##.iqp-logo-box
-v.youku.com##.logo-new
 v.youku.com##.kui-watermark-logo-layer
 ixigua.com##.common-xgplayer__Logo
 pptv.com###p-mark
 live.bilibili.com##.web-player-icon-roomStatus
 ! ↓ uBlock filters ↓
-*level=$media,domain=v.qq.com,redirect=noopmp3-0.1s
 iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)
 iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
 iqiyi.com##.black-screen[data-cupid="adblock-blackscreen"]
 m.iqiyi.com##+js(set, Object.prototype.adPlayerId, '')
 iqiyi.com##.iqp-player > iqpdiv[data-cupid="container"] > div[data-adzone][templatetype="common_pause"]
+||cibntv.net/youku/$media,important,redirect=none:10,from=youku.com
 ||cibntv.net/youku/*$media,redirect=noopmp3-0.1s,domain=youku.com
 ||valipl.cp31.ott.cibntv.net^$media,redirect=noopmp3-0.1s,domain=youku.com
 youku.com##+js(nano-stb, , ,0)
 @@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
 *$image,redirect-rule=1x1.gif,domain=youku.com
-youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
-youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
-youtube.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements, undefined)
+*_ad_$media,domain=youtube.com,3p
+www.youtube.com##+js(trusted-replace-xhr-response, /"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,/, , /player\?key=|watch\?v=|youtubei\/v1\/player/)
+www.youtube.com##+js(trusted-replace-xhr-response, /"adPlacements.*?("adSlots"|"adBreakHeartbeatParams")/gms, $1, youtubei/v1/player)
+tv.youtube.com##+js(trusted-replace-xhr-response, '"adPlacements"', '"no_ads"', /player\?key=|watch\?v=|youtubei\/v1\/player/)
+www.youtube.com##+js(trusted-replace-fetch-response, /"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,/, , player?key=)
+youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.playerAds, undefined)
+youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adSlots, undefined)
+youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements, undefined)
+m.youtube.com,music.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots important)
+youtube.com##.ytlr-horizontal-list-renderer__items > .yt-virtual-list__container > .yt-virtual-list__item--visible.yt-virtual-list__item--selected.yt-virtual-list__item:has-text(Ad)
+youtube.com###player [class*="suggested-action-badge-icon"]:upward(.ytp-suggested-action)
+||googlevideo.com/initplayback?source=youtube*&c=TVHTML5&oad=$xhr,domain=youtube.com
 ! ↑ uBlock filters ↑
 ! 规则
 ysepan.com###ck_glts_html
-||qzs.qq.com/qzone/biz/res/i.js
-||sinaimg.cn/wap/custom_html/
-||sina.cn/wap/custom_html/
-||www.webdissector.com/recv/gs.gif
-||www.douban.com/stat.html
-||webterren.com/webdig.js
-||webstat.ws.126.net/stat/?
-||stat.funshion.com^
-||sbeacon.sina.com.cn/mrt.gif?
-||m.wrating.com/m.gif
-||log.qianzhan.com^
-||irs01.net^
-||idm.bce.baidu.com/t/ping.gif
-||gridsumdissector.com/gs.gif?
-||fundin.douban.com/piwik?
-||emw927.com/count?
-||ef-dongfeng.tanx.com/tanx?
-||365dmp.com/*?
-||*/logger.js
-||*/index/q.php?cid=
-||*/baidu_tongji.js
+bing.com##.vs,.hc_card.footer
 www.solidot.org###ads
-bing.com##.iconAndButton.bnp_fly_hp.bnp_fly_sp,.card_body
 www.sogou.com###QRcode-footer
 www.265.com##.b-Cb-Db-f.b-f
 pc.qq.com##.J_qq_download.btn01
@@ -100,5 +86,6 @@ baike.baidu.com##.before-content
 gushiwen.cn###threeWeixin2
 www.yatu.tv###daohang
 dy2018.com,dytt89.com##.noticeFixedBox
-||jx.4kdv.com/logo.png
-||govguiyang.cn^
+thepiratebay.org###meta-right
+thepiratebay.org###d > [href^="https://cipledecline.buzz/redirect"]
+thepiratebay.org###d2 > [href^="https://cipledecline.buzz/redirect"]

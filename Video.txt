@@ -1,7 +1,7 @@
 [Adblock Plus 2.0]
 ! Title: 视频广告
 ! Description: uBlock 补充
-! Last modified: 2023-12-11
+! Last modified: 2024-04-16
 ! Expires: 7 days (update frequency)
 ! Homepage: https://fastly.jsdelivr.net/gh/o0T0o/o0T0o@master/Video.txt
 
@@ -12,9 +12,20 @@ v.qq.com##.panel-overlay__container
 v.qq.com##.panel-overlay__mask
 
 ! 爱奇艺
-||stc.iqiyipic.com/js/sdkpack/vippay.js
-www.iqiyi.com###nav_appDown
-www.iqiyi.com##.disable.item,.qy-player-pca,.func-download.func-item,.header-download.header-sideItem,.qy-header__game,.header-vip,.qy-player-side-op,.header-userSmall,.qy-anchor-hongbao-box,.scroll-anchor,.vip-btn,.pl__1
+! stc.iqiyipic.com/js/sdkpack/vippay.js
+iqiyi.com##.black-screen[data-cupid=adblock-blackscreen]
+iqiyi.com##.cupid-panel + div, div[data-adzone],#block-V
+iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)
+iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
+iqiyi.com##+js(set, QiyiPlayerProphetData.a.data, {})
+||iqiyi.com/videos/other/202$xmlhttprequest
+||71edge.com/videos/other/202$xmlhttprequest
+||iqiyipic.com/image/20*_100000$image
+apisgame.iqiyi.com
+static.g.iqiyi.com
+||ssports.iqiyi.com/json/shop/shopInfo
+||ssports.iqiyi.com/app/$media,object-subrequest
+show.ssports.com
 ! 优酷
 v.youku.com###checkout_counter_popup
 v.youku.com###checkout_counter_mask
@@ -48,22 +59,6 @@ ixigua.com##.common-xgplayer__Logo
 pptv.com###p-mark
 live.bilibili.com##.web-player-icon-roomStatus
 ! ↓ uBlock filters ↓
-iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)
-iqiyi.com##+js(set, Object.prototype.blackscreenDuration, 1)
-iqiyi.com##.black-screen[data-cupid="adblock-blackscreen"]
-m.iqiyi.com##+js(set, Object.prototype.adPlayerId, '')
-iqiyi.com##.iqp-player > iqpdiv[data-cupid="container"] > div[data-adzone][templatetype="common_pause"]
-||cibntv.net/youku/$media,important,redirect=none:10,from=youku.com
-||cibntv.net/youku/*$media,redirect=noopmp3-0.1s,domain=youku.com
-||valipl.cp31.ott.cibntv.net^$media,redirect=noopmp3-0.1s,domain=youku.com
-youku.com##+js(nano-stb, , ,0)
-@@||valipl.cp31.ott.cibntv.net^$xhr,domain=youku.com
-*$image,redirect-rule=1x1.gif,domain=youku.com
-*_ad_$media,domain=youtube.com,3p
-www.youtube.com##+js(trusted-replace-xhr-response, /"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,/, , /player\?key=|watch\?v=|youtubei\/v1\/player/)
-www.youtube.com##+js(trusted-replace-xhr-response, /"adPlacements.*?("adSlots"|"adBreakHeartbeatParams")/gms, $1, youtubei/v1/player)
-tv.youtube.com##+js(trusted-replace-xhr-response, '"adPlacements"', '"no_ads"', /player\?key=|watch\?v=|youtubei\/v1\/player/)
-www.youtube.com##+js(trusted-replace-fetch-response, /"adPlacements.*?([A-Z]"\}|"\}{2})\}\]\,/, , player?key=)
 youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.playerAds, undefined)
 youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 youtube.com,youtubekids.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adSlots, undefined)
@@ -86,6 +81,15 @@ baike.baidu.com##.before-content
 gushiwen.cn###threeWeixin2
 www.yatu.tv###daohang
 dy2018.com,dytt89.com##.noticeFixedBox
-thepiratebay.org###meta-right
-thepiratebay.org###d > [href^="https://cipledecline.buzz/redirect"]
-thepiratebay.org###d2 > [href^="https://cipledecline.buzz/redirect"]
+
+! 手机
+m.v.qq.com##.at-app-banner__content
+m.v.qq.com##.bottom-wrapper
+m.iqiyi.com##.mtb10.m-imgTextList
+m.iqiyi.com##.m-iqylink-guide
+m.iqiyi.com##.m-iqyGuide-layer
+m.youku.com##.callEnd_box
+m.youku.com##.h5-detail-guide.clipboard
+m.youku.com##.h5-detail-vip-guide.clipboard
+m.youku.com###feed-lists
+

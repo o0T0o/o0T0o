@@ -92,4 +92,9 @@ m.youku.com##.callEnd_box
 m.youku.com##.h5-detail-guide.clipboard
 m.youku.com##.h5-detail-vip-guide.clipboard
 m.youku.com###feed-lists
+m.tv.sohu.com##.js-app-redbtn-act
+m.tv.sohu.com##.app-guess-vbox.app-vbox
+m.tv.sohu.com##.item
+m.tv.sohu.com##.js-app-topbanner.actv-banner
+m.tv.sohu.com##.hori-video-list.pl-list2
 
